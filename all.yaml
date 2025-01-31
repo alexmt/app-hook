@@ -1,9 +1,16 @@
-apiVersion: v1
-kind: ConfigMap
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  name: hello
-data:
-  foo: bar
+  name: app-with-hook
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/alexmt/app-hook
+    path: .
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
