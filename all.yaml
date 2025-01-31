@@ -21,7 +21,7 @@ spec:
     directory:
       include: 'job.yaml'
   destination:
-    server: https://kubernetes.default.svc
+    server: laptop
     namespace: argocd
   syncPolicy:
     automated:
