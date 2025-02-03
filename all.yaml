@@ -26,13 +26,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: file:///tmp/app-hook
+    repoURL: https://github.com/alexmt/app-hook
     targetRevision: HEAD
     path: '.'
     directory:
       include: 'job.yaml'
   destination:
-    server: laptop
+    name: laptop
     namespace: argocd
   syncPolicy:
     automated:
