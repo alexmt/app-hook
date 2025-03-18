@@ -17,7 +17,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: -bad-name...hook
+  name: hook
   # this is probably messes things up
   namespace: argocd
   annotations:
